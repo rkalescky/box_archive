@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J tar
 #SBATCH -o tar.out
-#SBATCH -p archive
+#SBATCH -p htc
 #SBATCH --mem=6G
 
 source ./box_archive.sh
