@@ -8,6 +8,7 @@ Scripts to tar, compress, and upload large datasets to Box. The scripts use GNU 
    3. Edit `~/.netrc` such that first first line is `machine ftp.box.com`, the second line is `login <your_smu_email_address`, and the third line is `password <your_unique_box_password>`
 2. Edit `tar_data.sbatch` such that `<directory_to_tar>` is directory to be archived, `<archive_prefix>` the prefix of the archive files, and `<temp_directory>` is directory for archive files before upload.
 3. Submit `tar_data.sbatch` and wait for archives to be created
-4. Edit `upload_data.sbatch` such that `<box_directory>` is Box directory for archive files, `<archive_prefix>` the prefix of the archive files, and `<temp_directory>` is directory for archive files before upload
-5. Submit `upload_data.sbatch` and wait for archives to be uploaded
+4. In Box, create directory to which archive files will be uploaded
+5. Edit `upload_data.sbatch` such that `<box_directory>` is Box directory for archive files from the previous step, `<archive_prefix>` the prefix of the archive files, and `<temp_directory>` is directory for archive files before upload
+6. Submit `upload_data.sbatch` and wait for archives to be uploaded
 
