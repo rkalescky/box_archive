@@ -15,12 +15,12 @@ function upload_archive {
   index_max=${5}
   
   index=$(printf %04d ${index_current})
-  archive_file="${temp_directory}/${prefix}.tar.${index}.gz"
+  archive_file="${temp_directory}/${prefix}.tar.${index}"
   listings_directory="${temp_directory}/${prefix}_listings"
   hash_directory="${temp_directory}/${prefix}_sha512sums"
   sha512_file="${hash_directory}/${archive_file}.sha512sum"
   archive_contents_file="${listings_directory}/${archive_file}.txt"
-  archive_compressed_file="${temp_directory}/${archive_file}"
+  archive_compressed_file="${temp_directory}/${archive_file}.gz"
   mkdir -p ${listings_directory} ${hash_directory}
   
   tar -tf ${archive_file} > ${archive_contents_file}
