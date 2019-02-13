@@ -3,7 +3,7 @@ function tar_directory {
   prefix=${2}
   temp_directory=${3}
   mkdir -p ${temp_directory}
-  tar --ignore-failed-read -M -L 15G -F "./next_volume.sh ${prefix} ${temp_directory}" -cf "${prefix}.tar" ${target}
+  tar -h --ignore-failed-read -M -L 15G -F "./next_volume.sh ${prefix} ${temp_directory}" -cf "${prefix}.tar" ${target}
   ./next_volume.sh ${prefix} ${temp_directory}
 }
 
